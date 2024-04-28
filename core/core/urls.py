@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from loginSignup.views import *
+from portfolio.views import portfolio_view, add_position
 
 urlpatterns = [
 
@@ -25,5 +26,8 @@ urlpatterns = [
     path('register/', register, name='register'),
 
     path('admin/', admin.site.urls),
+    path('portfolio/', portfolio_view, name='Portfolio'),
+    path('portfolio/add/', add_position, name='add_position'),
+
 ]
 

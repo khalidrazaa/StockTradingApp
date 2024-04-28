@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <ink rel="stylesheet" type="text/css" href="styles.css">
+</head>
+ <!---Bootstrap Icon & CSS-->
+ {% load bootstrap5 %}
+ {% bootstrap_css %}
+ {% bootstrap_javascript %}
+ {% load static %}
+ 
+
+<body>
+    <h1>Portfolio</h1>
+    <ul>
+        {% for position in positions %}
+        <li>{{ position.symbol }} - {{ position.quantity }} shares at {{ position.purchase_price }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_position' %}">Add Position</a>
+</body>
+</html>

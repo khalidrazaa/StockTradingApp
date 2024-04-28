@@ -42,9 +42,12 @@ INSTALLED_APPS = [
 EXTERNAL_APPS = [
     'bootstrap5',
     'loginSignup',
+    'portfolio'
 ]
 
 INSTALLED_APPS += EXTERNAL_APPS
+
+LOGIN_URL = 'login'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
