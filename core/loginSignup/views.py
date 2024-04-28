@@ -9,9 +9,6 @@ from .forms import LoginForm
 def landing(request):
     return render(request, "landing.html")
 
-def register(request):
-    return render(request, "register.html")
-
 def login(request):
     return render(request, "login.html")
 
@@ -40,7 +37,7 @@ def login_view(request):
             if user is not None:
                 login(request, user)
                 # Redirect to a success page or homepage
-                return redirect('home')  # Change 'home' to the name of your homepage URL
+                return redirect('landing')  # Change 'home' to the name of your homepage URL
             else:
                 # Invalid login
                 return render(request, 'login.html', {'form': form, 'error_message': 'Invalid email or password.'})
