@@ -1,0 +1,80 @@
+{% extends 'landingbase.html' %}
+
+{% block start %}
+{% load static %}
+
+<div class="row">
+    <div class="col-12">
+        <h3 class="display-6 text-center mt-5 mb-2">
+        Welcome to Stock Trading App. <br> The capstone project of IIIT-H + GL PGCSS Batch 2023-24</h3>
+    </div>
+</div>
+
+<div class="row justify-content-evenly pt-3 pb-5">
+    <div class="col-md-5 pt-3">
+        <img src="{% static 'growth.jpg' %}" class="img-fluid" alt="growth chart">
+    </div>
+    
+    <div class="col-md-5 pt-3" style="background-color:#f1f1f1;"></div>
+        <div class="row justify-content-evenly pt-2 pb-5" >
+            <div class="col-md-5 pt-1">
+                <h3 class="mb-2"> Register here </h3>
+                <form>
+                
+                    <div class="form-group row">
+                        <label for="fname" class="col-sm-2 col-form-label">First Name</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="fname" placeholder="Shahrukh">
+                        </div>
+                    </div>
+                
+                    <div class="form-group row">
+                        <label for="lname" class="col-sm-2 col-form-label">Last Name</label>
+                        <div class="col-sm-10">
+                          <input type="lname" class="form-control" id="lname" placeholder="Khan">
+                        </div>
+                    </div>
+                
+                    <div class="form-group row">
+                        <label for="email" class="col-sm-2 col-form-label">e-mail</label>
+                        <div class="col-sm-10">
+                          <input type="email" class="form-control" id="email" placeholder="s.Khan@gmail.com" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">
+                                <p class="emailHelp"> We'll never share your email with anyone else. </p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="form-group row">
+                        <label for="password" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                          <input type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="password" class="col-sm-2 col-form-label">Confirm Password</label>
+                        <div class="col-sm-10">
+                          <input type="password" class="form-control" id="password2" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="address" class="col-sm-2 col-form-label">Address</label>
+                        <div class="col-sm-10">
+                          <input type="password" class="form-control" id="address" placeholder="House No./Flat No., Street, City, State, Pincode">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="phone" class="col-sm-2 col-form-label">Phone</label>
+                        <div class="col-sm-10">
+                          <input type="number" class="form-control" id="phone" placeholder="9876543210">
+                        </div>
+                    </div>
+                
+                    <button type="submit" class="btn btn-primary mb-2">Register Now</button>
+            
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

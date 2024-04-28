@@ -1,0 +1,28 @@
+{% extends 'landingbase.html' %}
+
+{% block start %}
+
+<div class="col-md-5 pt-5">
+    <h3 class="mb-2"> Login </h3>
+    <form>
+        <div class="form-group row">
+            <label for="email" class="col-sm-2 col-form-label">e-mail</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="email" placeholder="s.Khan@gmail.com">
+            </div>
+        </div>
+        
+        <div class="form-group row">
+            <label for="password" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary mb-2">Login</button>
+    
+    </form>
+</div>
+
+
+{% endblock %}

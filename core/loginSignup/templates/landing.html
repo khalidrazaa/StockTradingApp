@@ -1,0 +1,73 @@
+{% extends 'landingbase.html' %}
+
+{% block start %}
+{% load static %}
+
+<div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'dsban.jpg' %}" class="d-block img-fluid mw-80" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'dsban2.jpg'%}" class="d-block img-fluid mw-80" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'dsban3.jpg' %}" class="d-block img-fluid mw-80" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<div class="container-fluid">
+    
+    <div class="row">
+        <div class="col-12">
+            <h3 class="display-6 text-center mt-5 mb-2">
+                This is the text that will appear in the middle of page below carousal.<br>This is the second line in the middle of the page.
+            </h3>
+        </div>
+    </div>
+
+    <div class="row justify-content-evenly pt-3 pb-3">
+        <div class="col-md-3 text-center mt-5">
+            <h1><i class="bi bi-file-code-fill text-primary"></i></h1>
+        
+            <h5>Frontend GUI</h5>
+            <p>
+                This Stock trading app has GUI to analyse the live market trend, backtest and visualize most common indicators.
+            </p>
+        </div>
+
+        <div class="col-md-3 text-center mt-5">
+            <h1><i class="bi bi-easel-fill text-danger"></i></h1>
+            
+            <h5>Bankend Tech</h5>
+            <p>
+                This app is developed on python django tech stack intergrating ICICI Breeze API for data cosumption. 
+            </p>
+        </div>
+
+        <div class="col-md-3 text-center mt-5">
+            <h1><i class="bi bi-calendar3-range-fill text-success"></i></h1>
+            
+            <h5>Built by traders </h5>
+            <p>
+                Active traders has contributed in development making this app best both worlds, technology + technical analyst.
+            </p>
+        </div>
+    </div>
+
+
+{% endblock %}
