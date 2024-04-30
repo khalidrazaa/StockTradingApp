@@ -10,16 +10,66 @@
     </div>
 </div>
 
-<div class="container py-5 mb-5">
+<div class="container py-3 mb-5">
     <div class="row justify-content-center align-items-center">
         <!-- Form column -->
         <div class="col-md-6">
             <div style="background-color:#f1f1f1; padding: 20px;">
-                <h3 class="mb-4">Register here</h3>
+                <h3 class="mb-4 text-center">Register here</h3>
                 <form method="post">
+
                     {% csrf_token %}
-                    {{ form.as_p }} 
+
+                    <div class="form-group row mb-3">
+                        <label for="first_name" class="col-sm-4 col-form-label">First Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="first_name" id="fname" placeholder="Shahrukh">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label for="last_name" class="col-sm-4 col-form-label">Last Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Khan">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label for="username" class="col-sm-4 col-form-label">username</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="username" id="username" placeholder=" a unique username ">
+                        </div>
+                    </div>
                     
+                    {% if messages %}
+                    {{ message.tags }}
+                    <div class="alert alert-primary" role="alert">
+                        {% for message in messages %}
+                        <li>{{ message }}</li>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
+                    <div class="form-group row mb-3">
+                        <label for="email" class="col-sm-4 col-form-label">E-mail</label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="s.Khan@gmail.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-3">
+                        <label for="password" class="col-sm-4 col-form-label">Password</label>
+                        <div class="col-sm-8">
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-3">
+                        <label for="password2" class="col-sm-4 col-form-label">Confirm Password</label>
+                        <div class="col-sm-8">
+                            <input type="password" class="form-control" name="password2" id="password2" placeholder="Confirm Password">
+                        </div>
+                    </div>
+
+                    <p> Already have account <a href="{% url 'login' %}"> Login</a></p>
                     <div class="form-group row"> <!-- Moved the button inside a separate row -->
                         <div class="col-sm-8 offset-sm-4"> <!-- Adjusted column size and added offset -->
                             <button type="submit" class="btn btn-primary btn-block">Register</button> <!-- Added btn-block class for full-width button -->
@@ -29,5 +79,7 @@
             </div>
         </div>
     </div>
-</div>  
+</div>
+
+
 {% endblock %}

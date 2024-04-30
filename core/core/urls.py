@@ -22,11 +22,12 @@ from portfolio.views import portfolio_view, add_position
 urlpatterns = [
 
     path('', landing, name='landing'),
-    path('login/', login, name='login'),
+    path('login/', login_page, name='login'),
     path('register/', register, name='register'),
 
     path('admin/', admin.site.urls),
-    path('portfolio/', portfolio_view, name='Portfolio'),
+
+    path('portfolio/', portfolio_view, name='portfolio'),
     path('portfolio/add/', add_position, name='add_position'),
 
 ]

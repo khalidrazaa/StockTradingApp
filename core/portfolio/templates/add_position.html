@@ -13,7 +13,9 @@
 
     <main>
         <form method="post">
+
             {% csrf_token %}
+            
             <div class="form-group">
                 <label for="symbol">Stock Symbol:</label>
                 <input type="text" id="symbol" name="symbol" required>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to Stock Trading App</title>
+
+  <!-- Bootstrap Icon & CSS -->
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  {% load static %}
+
+  <style>
+    .logo-text {
+        font-family: 'Arial', sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff; /* Change color as needed */
+        text-decoration: none; /* Remove underline */
+    }
+
+    .footer {
+        width: 100%;
+        background-color: #f8f9fa; /* Change background color as needed */
+        padding: 20px;
+        position: fixed;
+        bottom: 0;
+    }
+  </style>
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-body-tertiary" style="background-color: blue;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'landing' %}">
+        <span class="logo-text">StockTradingApp</span> 
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'register' %}">
+              <button type="button" class="btn btn-danger">Register</button>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'login' %}">
+              <button type="button" class="btn btn-success">Login</button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar Ends here -->
+
+  <div class="container-fluid">
+    {% block start %}
+    {% endblock %}
+  </div>
+
+  <!-- Copyright -->
+  <footer class="footer py-2 bg-secondary text-white text-center">
+    <div class="container">
+      <p>Developed and shared by Batch 2023-2024 PGCSS IIIT-H, in collaboration with Great Learning online platform.</p>
+    </div>
+  </footer>
+</body>
+</html>
